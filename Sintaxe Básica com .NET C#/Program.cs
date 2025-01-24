@@ -1,16 +1,42 @@
 ﻿using Sintaxe_Básica_com_.NET_C_.Models;
 
-bool choveu = true;
-bool estaTarde = false;
+// Calculadora calc = new Calculadora();
 
-if (!choveu && !estaTarde)
-{
-    Console.WriteLine("Vou pedalar");
-}
-else
-{
-    Console.WriteLine("Vou pedalar outro dia");
-}
+// calc.Somar(10, 30);
+// calc.Subtrair(10, 50);
+// calc.Multiplicar(15, 45);
+// calc.Dividir(2, 2);
+// calc.Potencia(3, 3);
+// calc.Seno(30);
+// calc.Cosseno(30);
+// calc.Tangente(30);
+// calc.RaizQuadrada(9);
+
+// int numeroIncremento = 10;
+
+// Console.WriteLine(numeroIncremento);
+// Console.WriteLine("Incrementando o 10");
+// numeroIncremento++; //numero = numero + 1;
+// Console.WriteLine(numeroIncremento);
+
+// int numeroDecremento = 20;
+
+// Console.WriteLine(numeroDecremento);
+// Console.WriteLine("Decrementando o 20");
+// numeroDecremento--;
+// Console.WriteLine(numeroDecremento);
+
+// bool choveu = true;
+// bool estaTarde = false;
+
+// if (!choveu && !estaTarde)
+// {
+//     Console.WriteLine("Vou pedalar");
+// }
+// else
+// {
+//     Console.WriteLine("Vou pedalar outro dia");
+// }
 
 // bool possuiPresencaMinima = true;
 // double media = 7.5;
