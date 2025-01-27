@@ -1,41 +1,48 @@
-﻿using Sintaxe_Básica_com_.NET_C_.Models;
+﻿using ExemploFundamentos.Common.Models;
 
-string opcao;
-bool exibirMenu = true;
+Pessoa pessoa = new Pessoa();
 
-while (exibirMenu)
-{
-    Console.WriteLine("Digite a sua opção: ");
-    Console.WriteLine("1 - Cadastrar cliente");
-    Console.WriteLine("2 - Buscar cliente");
-    Console.WriteLine("3 - Apagar cliente");
-    Console.WriteLine("4 - Encerrar");
+pessoa.Nome = "Leonardo";
+pessoa.Idade = 22;
 
-    opcao = Console.ReadLine();
+pessoa.Apresentar();
 
-    switch (opcao)
-    {
-        case "1":
-            Console.WriteLine("Cadastro de cliente");
-            break;
-        case "2":
-            Console.WriteLine("Busca de cliente");
-            break;
-        case "3":
-            Console.WriteLine("Apagar cliete");
-            break;
-        case "4":
-            Console.WriteLine("Encerrar");
-            // Environment.Exit(0); Finaliza totalmente o programa
-            exibirMenu = false;
-            break;
-        default:
-            Console.WriteLine("Opção inválida");
-            break;
-    }
-}
+// string opcao;
+// bool exibirMenu = true;
 
-Console.WriteLine("O programa se encerrou");
+// while (exibirMenu)
+// {
+//     Console.WriteLine("Digite a sua opção: ");
+//     Console.WriteLine("1 - Cadastrar cliente");
+//     Console.WriteLine("2 - Buscar cliente");
+//     Console.WriteLine("3 - Apagar cliente");
+//     Console.WriteLine("4 - Encerrar");
+
+//     opcao = Console.ReadLine();
+
+//     switch (opcao)
+//     {
+//         case "1":
+//             Console.WriteLine("Cadastro de cliente");
+//             break;
+//         case "2":
+//             Console.WriteLine("Busca de cliente");
+//             break;
+//         case "3":
+//             Console.WriteLine("Apagar cliete");
+//             break;
+//         case "4":
+//             Console.WriteLine("Encerrar");
+//             // Environment.Exit(0); Finaliza totalmente o programa
+//             exibirMenu = false;
+//             break;
+//         default:
+//             Console.WriteLine("Opção inválida");
+//             break;
+//     }
+// }
+
+// Console.WriteLine("O programa se encerrou");
 
 // int soma = 0;
 // int numero = 0;
