@@ -1,11 +1,70 @@
-﻿using ExemploFundamentos.Common.Models;
+﻿List<string> listaString = new List<string>();
 
-Pessoa pessoa = new Pessoa();
+listaString.Add("SP");
+listaString.Add("BA");
+listaString.Add("MG");
+listaString.Add("RJ");
 
-pessoa.Nome = "Leonardo";
-pessoa.Idade = 22;
+Console.WriteLine($"Itens na minha lista: {listaString.Count} - Capacidade: {listaString.Capacity}");
 
-pessoa.Apresentar();
+listaString.Add("SC");
+
+Console.WriteLine($"Itens na minha lista: {listaString.Count} - Capacidade: {listaString.Capacity}");
+
+listaString.Remove("MG");
+
+Console.WriteLine($"Itens na minha lista: {listaString.Count} - Capacidade: {listaString.Capacity}");
+
+// Console.WriteLine("Percorrendo a Lista com o FOR");
+// for (int contador = 0; contador < listaString.Count; contador++)
+// {
+//     Console.WriteLine($"Posição Nº {contador} - {listaString[contador]}");
+// }
+
+// Console.WriteLine("Percorrendo a Lista com o FOREACH");
+// int contadorForeach = 0;
+// foreach (string item in listaString)
+// {
+//     Console.WriteLine($"Posição Nº {contadorForeach} - {item}");
+//     contadorForeach++;
+// }
+
+// int[] arrayInteiros = new int[3];
+
+// arrayInteiros[0] = 72;
+// arrayInteiros[1] = 74;
+// arrayInteiros[2] = 50;
+// // arrayInteiros[3] = 1; Vai quebrar o código, indexOutOfBounds
+
+// Console.WriteLine("Percorrendo o Array com o FOR");
+// for (int contador = 0; contador < arrayInteiros.Length; contador++)
+// {
+//     Console.WriteLine($"Posição nº {contador} - {arrayInteiros[contador]}");
+// }
+
+// // Cria um novo array com o dobro de tamanho e copia os valores do array
+// Array.Resize(ref arrayInteiros, arrayInteiros.Length * 2);
+
+// // Faz a mesma coisa, só que com outro método e para outra variável
+// int[] arrayInteirosDobrados = new int[arrayInteiros.Length * 2];
+// Array.Copy(arrayInteiros, arrayInteirosDobrados, arrayInteiros.Length);
+
+// Console.WriteLine("Percorrendo o Array com o FOREACH");
+// int contadorForeach = 0;
+// foreach (int valor in arrayInteiros)
+// {
+//     Console.WriteLine($"Posição Nº {contadorForeach} - {valor}");
+//     contadorForeach++;
+// }
+
+// using ExemploFundamentos.Common.Models;
+
+// Pessoa pessoa = new Pessoa();
+
+// pessoa.Nome = "Leonardo";
+// pessoa.Idade = 22;
+
+// pessoa.Apresentar();
 
 // string opcao;
 // bool exibirMenu = true;
