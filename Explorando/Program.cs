@@ -1,46 +1,95 @@
 ﻿using Explorando.Models;
 using System.Globalization;
 
-Dictionary<string, string> estados = new Dictionary<string, string>();
+int numero = 20;
 
-estados.Add("SP", "São Paulo");
-estados.Add("BA", "Bahia");
-estados.Add("MG", "Minas Gerais");
+ // IF Ternário
+bool ehPar = numero % 2 == 0;
+Console.WriteLine($"O número {numero} é " + (ehPar ? "par" : "ímpar"));
 
-foreach (var item in estados) // Ou KeyValuePair<string, string> item, "var" significa que vai reconhecer o tipo automaticamente
+// IF NORMAL
+if (numero % 2 == 0)
 {
-    Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
-}
-
-// estados.Add("BA2", "Bahia");
-
-Console.WriteLine("--------------");
-
-estados.Remove("BA");
-estados["SP"] = "São Paulo - valor alterado";
-
-foreach(var item in estados)
-{
-    Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
-}
-
-Console.WriteLine("--------------");
-
-string chave = "SP2";
-Console.WriteLine($"Verificando o elemento: {chave}");
-
-if (estados.ContainsKey(chave))
-{
-    Console.WriteLine($"Valor existente: {chave}");
+    Console.WriteLine($"O número {numero} é par");
 }
 else
 {
-    Console.WriteLine($"Valor não existe. É seguro adicionar a chave: {chave}");
+    Console.WriteLine($"O número {numero} é ímpar");
 }
 
-Console.WriteLine("--------------");
+// Pessoa p1 = new Pessoa("Leonardo", "Oliveira");
 
-Console.WriteLine(estados["MG"]);
+// (string nome, string sobrenome) = p1;
+
+// Console.WriteLine($"{nome} {sobrenome}");
+
+// LeituraArquivo arquivo = new LeituraArquivo();
+
+// var (sucesso, linhasArquivo, _) = arquivo.LerArquivo("Arquivos/arquivoLeitura.txt"); // Underline descarta a informação
+
+// if (sucesso)
+// {
+//     // Console.WriteLine("Quantidade linhas do arquivo: " + quantidadeLinhas); Informação descartada
+//     foreach(string linha in linhasArquivo)
+//     {
+//         Console.WriteLine(linha);
+//     }
+// }
+// else
+// {
+//     Console.WriteLine("Não foi possível ler o arquivo");
+// }
+
+// (int Id, string Nome, string Sobrenome, decimal Altura) tupla = (1, "Leonardo", "Oliveira", 1.79M);
+
+// // ValueTuple<int, string, string, decimal> outroExemploTupla = (2, "Leonardo", "Buta", 1.80M);
+// // var outroExemploTuplaCreate = Tuple.Create(3, "Lorena", "Oliveira", 1.60M);
+
+// Console.WriteLine($"Id: {tupla.Id}");
+// Console.WriteLine($"Nome: {tupla.Nome}");
+// Console.WriteLine($"Sobrenome: {tupla.Sobrenome}");
+// Console.WriteLine($"Altura: {tupla.Altura}");
+
+// Dictionary<string, string> estados = new Dictionary<string, string>();
+
+// estados.Add("SP", "São Paulo");
+// estados.Add("BA", "Bahia");
+// estados.Add("MG", "Minas Gerais");
+
+// foreach (var item in estados) // Ou KeyValuePair<string, string> item, "var" significa que vai reconhecer o tipo automaticamente
+// {
+//     Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+// }
+
+// // estados.Add("BA2", "Bahia");
+
+// Console.WriteLine("--------------");
+
+// estados.Remove("BA");
+// estados["SP"] = "São Paulo - valor alterado";
+
+// foreach(var item in estados)
+// {
+//     Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+// }
+
+// Console.WriteLine("--------------");
+
+// string chave = "SP2";
+// Console.WriteLine($"Verificando o elemento: {chave}");
+
+// if (estados.ContainsKey(chave))
+// {
+//     Console.WriteLine($"Valor existente: {chave}");
+// }
+// else
+// {
+//     Console.WriteLine($"Valor não existe. É seguro adicionar a chave: {chave}");
+// }
+
+// Console.WriteLine("--------------");
+
+// Console.WriteLine(estados["MG"]);
 
 // Stack<int> pilha = new Stack<int>();
 
