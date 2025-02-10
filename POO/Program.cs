@@ -1,10 +1,18 @@
 ﻿using POO.Models;
+using POO.Interfaces;
 
-Pessoa p1 = new Pessoa("Leonardo");
-Aluno a1 = new Aluno("Eduardo");
-a1.Apresentar();
+ICalculadora calc = new Calculadora();
 
-Professor prof = new Professor();
+Console.WriteLine(calc.Multiplicar(3, 9));
+
+// Computador c = new Computador();
+// Console.WriteLine(c);
+
+// Pessoa p1 = new Pessoa("Leonardo");
+// Aluno a1 = new Aluno("Eduardo");
+// a1.Apresentar();
+
+// Professor prof = new Professor();
 
 // Corrente c = new Corrente();
 
