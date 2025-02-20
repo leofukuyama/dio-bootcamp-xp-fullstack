@@ -10,7 +10,7 @@ namespace Modulo_API.Controllers
     [Route("[controller]")]
     public class UsuarioController : ControllerBase
     {
-        [HttpGet("ObterDatHoraAtual")]
+        [HttpGet("ObterDataHoraAtual")]
         public IActionResult ObterDataHora()
         {
             var obj = new
