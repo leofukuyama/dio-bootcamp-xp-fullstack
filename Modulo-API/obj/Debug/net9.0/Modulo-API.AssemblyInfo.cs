@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Modulo-API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+365397d51e23445f3e341403eef583d73cd45cad")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c5604b2cd13b44a7ca48f1560502468eaea6d13")]
 [assembly: System.Reflection.AssemblyProductAttribute("Modulo-API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Modulo-API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

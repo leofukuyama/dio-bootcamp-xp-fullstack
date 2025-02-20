@@ -1,3 +1,5 @@
+using Modulo_API.Controllers;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -32,6 +34,24 @@ app.MapGet("/weatherforecast", () =>
     return forecast;
 })
 .WithName("GetWeatherForecast");
+
+app.MapGet("/Usuario/ObterDataHoraAtual", () =>
+{
+    var obj = new
+            {
+                Data = DateTime.Now.ToLongDateString(),
+                Hora = DateTime.Now.ToShortDateString()
+            };
+
+    return obj;
+}).WithName("ObterDataHoraAtual");
+
+app.MapGet("/Usuario/Apresentar/{nome}", (string nome) =>
+{
+    var mensagem = $"Olá, {nome}! Seja bem-vindo!";
+    return new {mensagem};
+    
+}).WithName("Apresentar");
 
 app.Run();
 
