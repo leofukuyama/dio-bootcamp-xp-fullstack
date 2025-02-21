@@ -8,6 +8,7 @@ namespace Modulo_API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [Tags("Usuários")]
     public class UsuarioController : ControllerBase
     {
         [HttpGet("ObterDataHoraAtual")]
