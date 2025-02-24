@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using ExemploInicial.Context;
 using ExemploInicial.Entities;
 
-namespace Modulo_API.Controllers
+namespace ExemploInicial.Controllers
 {
     [ApiController]
     [Route("[controller]")]
