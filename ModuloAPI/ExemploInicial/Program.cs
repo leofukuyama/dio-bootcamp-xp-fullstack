@@ -1,4 +1,4 @@
-using Modulo_API.Context;
+using ExemploInicial.Context;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

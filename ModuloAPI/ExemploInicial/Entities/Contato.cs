@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Modulo_API.Entities
+namespace ExemploInicial.Entities
 {
     public class Contato
     {

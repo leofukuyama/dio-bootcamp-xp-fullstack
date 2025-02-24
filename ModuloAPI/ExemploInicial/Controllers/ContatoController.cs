@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Modulo_API.Context;
-using Modulo_API.Entities;
+using ExemploInicial.Context;
+using ExemploInicial.Entities;
 
 namespace Modulo_API.Controllers
 {
