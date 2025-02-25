@@ -57,5 +57,20 @@ namespace ExemploInicial.Controllers
             return Ok(contatoBanco);
 
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult Deletar(int id)
+        {
+            var contatoBanco = _context.Contatos.Find(id);
+
+            if (contatoBanco == null)
+                return NotFound();
+
+            _context.Contatos.Remove(contatoBanco);
+            _context.SaveChanges();
+            
+            return NoContent();    
+    
+        } 
     }
 }
