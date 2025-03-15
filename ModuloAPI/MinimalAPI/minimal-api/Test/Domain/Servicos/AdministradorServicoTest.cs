@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using minimal_api.Dominio.Entidades;
+using minimal_api.Dominio.Servicos;
 using minimal_api.Infraestrutura.Db;
 
 namespace Test.Domain.Servicos
@@ -14,9 +16,11 @@ namespace Test.Domain.Servicos
     {
         private DbContexto CriarContextoTeste()
         {
-           // Configurar o ConfigurationBuilder
+            var assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            var path = Path.GetFullPath(Path.Combine(assemblyPath ?? "", "..", "..", ".."));
+
             var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
+                .SetBasePath(path ?? Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddEnvironmentVariables();
 
@@ -29,21 +33,44 @@ namespace Test.Domain.Servicos
         public void TestarSalvarAdministrador()
         {
             // Arrange
+            var context = CriarContextoTeste();
+            context.Database.ExecuteSqlRaw("TRUNCATE TABLE Administradores");
+
             var adm = new Administrador();
-            adm.Id = 1;
             adm.Email = "teste@teste.com";
             adm.Senha = "teste";
             adm.Perfil = "Adm";
-            var context = CriarContextoTeste();
+
+            
+            var administradorServico = new AdministradorServico(context);
             
             // Act
-            
+            administradorServico.Incluir(adm);
 
             // Assert
-            Assert.AreEqual(1, adm.Id);
-            Assert.AreEqual("teste@teste.com", adm.Email);
-            Assert.AreEqual("teste", adm.Senha);
-            Assert.AreEqual("Adm", adm.Perfil);
+            Assert.AreEqual(1, administradorServico.Todos(1).Count());
+        }
+
+        [TestMethod]
+        public void TestarBuscarPorIdAdministrador()
+        {
+            // Arrange
+            var context = CriarContextoTeste();
+            context.Database.ExecuteSqlRaw("TRUNCATE TABLE Administradores");
+
+            var adm = new Administrador();
+            adm.Email = "teste@teste.com";
+            adm.Senha = "teste";
+            adm.Perfil = "Adm";
+            
+            var administradorServico = new AdministradorServico(context);
+            
+            // Act
+            administradorServico.Incluir(adm);
+            var admDb = administradorServico.BuscaPorId(adm.Id);
+
+            // Assert
+            Assert.AreEqual(1, admDb.Id);
         }
     }
 }
