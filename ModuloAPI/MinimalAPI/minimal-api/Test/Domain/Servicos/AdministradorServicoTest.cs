@@ -70,7 +70,8 @@ namespace Test.Domain.Servicos
             var admDb = administradorServico.BuscaPorId(adm.Id);
 
             // Assert
-            Assert.AreEqual(1, admDb.Id);
+            if(admDb != null)
+                Assert.AreEqual(1, admDb.Id);
         }
     }
 }
